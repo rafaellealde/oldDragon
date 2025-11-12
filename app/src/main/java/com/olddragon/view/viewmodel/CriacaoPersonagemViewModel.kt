@@ -1,7 +1,7 @@
+// viewmodel/CriacaoPersonagemViewModel.kt
 package com.olddragon.view.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -14,19 +14,31 @@ class CriacaoPersonagemViewModel : ViewModel() {
     
     private var _etapaAtual = MutableStateFlow(0)
     val etapaAtual: StateFlow<Int> = _etapaAtual.asStateFlow()
-    
-    private var _estiloAtributos = MutableStateFlow("")
-    val estiloAtributos: StateFlow<String> = _estiloAtributos.asStateFlow()
 
-    fun selecionarEstiloAtributos(estilo: String) {
-        _estiloAtributos.value = estilo
+    private var _atributosDisponiveis = MutableStateFlow<List<Int>>(emptyList())
+    val atributosDisponiveis: StateFlow<List<Int>> = _atributosDisponiveis.asStateFlow()
+
+    fun selecionarEstiloAtributos(estilo: String, nome: String = "") {
         val atributosRolados = when (estilo) {
             "Classico" -> rolarAtributosClassico()
             "Aventureiro" -> rolarAtributosAventureiro()
             "Heroico" -> rolarAtributosHeroico()
             else -> Atributos()
         }
-        _estadoPersonagem.value = _estadoPersonagem.value.copy(atributos = atributosRolados)
+        
+        _atributosDisponiveis.value = listOf(
+            atributosRolados.FOR,
+            atributosRolados.DES, 
+            atributosRolados.CON,
+            atributosRolados.INT,
+            atributosRolados.SAB,
+            atributosRolados.CAR
+        )
+        
+        _estadoPersonagem.value = _estadoPersonagem.value.copy(
+            nome = nome,
+            atributos = atributosRolados
+        )
         avancarEtapa()
     }
 
@@ -44,7 +56,7 @@ class CriacaoPersonagemViewModel : ViewModel() {
 
     private fun rolarAtributosAventureiro(): Atributos {
         val dados = List(6) { rolar3d6() }.sortedDescending()
-        return Atributos(
+        return Atributos().copy(
             FOR = dados[0],
             DES = dados[1],
             CON = dados[2],
@@ -56,7 +68,7 @@ class CriacaoPersonagemViewModel : ViewModel() {
 
     private fun rolarAtributosHeroico(): Atributos {
         val dados = List(6) { rolar4d6DescartarMenor() }.sortedDescending()
-        return Atributos(
+        return Atributos().copy(
             FOR = dados[0],
             DES = dados[1],
             CON = dados[2],
@@ -70,7 +82,17 @@ class CriacaoPersonagemViewModel : ViewModel() {
     
     private fun rolar4d6DescartarMenor(): Int {
         val dados = List(4) { Random.nextInt(1, 7) }.sorted()
-        return dados.drop(1).sum() // Descarta o menor
+        return dados.drop(1).sum()
+    }
+
+    fun redistribuirAtributos(novoAtributos: Atributos) {
+        val personagem = _estadoPersonagem.value
+        val pvMax = calcularPVParaClasse(personagem.classe, novoAtributos.CON)
+        _estadoPersonagem.value = personagem.copy(
+            atributos = novoAtributos,
+            pvMaximos = pvMax,
+            pvAtuais = pvMax
+        )
     }
 
     fun atualizarNome(nome: String) {
@@ -110,16 +132,6 @@ class CriacaoPersonagemViewModel : ViewModel() {
         return maxOf(1, pvBase + modificador)
     }
     
-    fun atualizarAtributos(atributos: Atributos) {
-        val personagem = _estadoPersonagem.value
-        val pvMax = calcularPVParaClasse(personagem.classe, atributos.CON)
-        _estadoPersonagem.value = personagem.copy(
-            atributos = atributos,
-            pvMaximos = pvMax,
-            pvAtuais = pvMax
-        )
-    }
-    
     fun atualizarAlinhamento(alinhamento: String) {
         _estadoPersonagem.value = _estadoPersonagem.value.copy(alinhamento = alinhamento)
     }
@@ -133,13 +145,12 @@ class CriacaoPersonagemViewModel : ViewModel() {
     }
     
     fun finalizarCriacao() {
-        // Aqui você pode salvar o personagem no futuro
-        _etapaAtual.value = 6 // Ir para a tela principal
+        _etapaAtual.value = 6
     }
     
     fun reiniciarCriacao() {
         _estadoPersonagem.value = Personagem()
         _etapaAtual.value = 0
-        _estiloAtributos.value = ""
+        _atributosDisponiveis.value = emptyList()
     }
 }

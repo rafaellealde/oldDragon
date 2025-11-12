@@ -5,13 +5,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.olddragon"
+    namespace = "com.olddragon"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.olddragon"
+        applicationId = "com.olddragon"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
