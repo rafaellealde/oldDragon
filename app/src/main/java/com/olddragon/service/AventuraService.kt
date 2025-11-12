@@ -1,12 +1,14 @@
 // service/AventuraService.kt
 package com.olddragon.service
 
-import android.app.Service
+import android.app.*
+import android.content.Context
 import android.content.Intent
 import android.os.IBinder
+import android.os.Build
 import androidx.core.app.NotificationCompat
+import com.olddragon.MainActivity
 import com.olddragon.model.Personagem
-import com.olddragon.model.combate.ResultadoCombate
 import kotlinx.coroutines.*
 import java.util.concurrent.TimeUnit
 
@@ -19,21 +21,33 @@ class AventuraService : Service() {
     private var tempoMorte = 0L
     
     companion object {
-        const val NOTIFICATION_ID = 1
+        const val NOTIFICATION_ID = 123
         const val CHANNEL_ID = "aventura_channel"
+        
+        fun startService(context: Context, personagem: Personagem) {
+            val intent = Intent(context, AventuraService::class.java).apply {
+                putExtra("personagem", personagem)
+            }
+            context.startService(intent)
+        }
+        
+        fun stopService(context: Context) {
+            val intent = Intent(context, AventuraService::class.java)
+            context.stopService(intent)
+        }
+    }
+    
+    override fun onCreate() {
+        super.onCreate()
+        createNotificationChannel()
     }
     
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         personagem = intent?.getSerializableExtra("personagem") as? Personagem
         startAventura()
         
-        // Manter serviço rodando em primeiro plano
-        val notification = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("Old Dragon - Modo Aventura")
-            .setContentText("${personagem?.nome} está em aventura...")
-            .setSmallIcon(android.R.drawable.ic_media_play)
-            .build()
-        
+        // Criar notificação em primeiro plano
+        val notification = createNotification("${personagem?.nome} está em aventura...")
         startForeground(NOTIFICATION_ID, notification)
         
         return START_STICKY
@@ -57,13 +71,13 @@ class AventuraService : Service() {
     
     private suspend fun verificarCombate() {
         val agora = System.currentTimeMillis()
-        val personagem = this.personagem ?: return
+        val p = personagem ?: return
         
-        // Calcular intervalo baseado no movimento
-        val intervaloCombate = TimeUnit.SECONDS.toMillis(personagem.raca.movimentoBase.toLong())
+        // Calcular intervalo baseado no movimento (9m = 9 segundos)
+        val intervaloCombate = TimeUnit.SECONDS.toMillis(p.raca.movimentoBase.toLong())
         
         if (agora - tempoUltimoCombate >= intervaloCombate) {
-            iniciarCombate(personagem)
+            iniciarCombate(p)
             tempoUltimoCombate = agora
         }
     }
@@ -77,74 +91,131 @@ class AventuraService : Service() {
             personagem?.pvAtuais = personagem?.pvMaximos ?: 0
             
             // Notificar recuperação
-            mostrarNotificacao("Old Dragon", "${personagem?.nome} se recuperou e está pronto para aventura!")
+            mostrarNotificacao(
+                "Personagem Recuperado", 
+                "${personagem?.nome} está pronto para nova aventura!"
+            )
+            updateNotification("${personagem?.nome} recuperado - em aventura")
         }
     }
     
-    private suspend fun iniciarCombate(personagemAtual: Personagem) {
+    private suspend fun iniciarCombate(personagem: Personagem) {
         val combateService = CombateService()
-        val inimigo = combateService.gerarInimigoAleatorio(personagemAtual.nivel)
         
-        val resultado = combateService.simularCombate(personagemAtual, inimigo)
-        
-        if (resultado.vitoria) {
-            // Vitória - ganhar XP
-            personagemAtual.experiencia += resultado.xpGanha
-            personagemAtual.pvAtuais -= resultado.danoSofrido
-            
-            // Verificar se subiu de nível
-            verificarSubidaNivel(personagemAtual)
-            
-            // Atualizar notificação
-            atualizarNotificacao("${personagemAtual.nome} derrotou ${inimigo.nome}! +${resultado.xpGanha} XP")
-            
-        } else {
-            // Derrota - personagem morre
-            personagemMorto = true
-            tempoMorte = System.currentTimeMillis()
-            personagemAtual.pvAtuais = 0
-            
-            // Notificar morte
-            mostrarNotificacao("Old Dragon - Personagem Morreu", 
-                "${personagemAtual.nome} foi derrotado por ${inimigo.nome}! Recuperando em 30 segundos...")
-        }
-        this.personagem = personagemAtual // Update the service's character state
+        combateService.simularCombateAutomatico(
+            personagem = personagem,
+            onProgress = { log ->
+                updateNotification(log)
+            },
+            onCombateTerminado = { resultado ->
+                if (resultado.vitoria) {
+                    // Vitória
+                    personagem.experiencia += resultado.xpGanha
+                    personagem.pvAtuais = maxOf(0, personagem.pvAtuais - resultado.danoSofrido)
+                    
+                    verificarSubidaNivel(personagem)
+                    
+                    updateNotification("${personagem.nome} venceu! +${resultado.xpGanha} XP")
+                    
+                    // Se morreu após vencer
+                    if (personagem.pvAtuais <= 0) {
+                        personagemMorto = true
+                        tempoMorte = System.currentTimeMillis()
+                        mostrarNotificacao(
+                            "Personagem Morreu", 
+                            "${personagem.nome} morreu após a vitória! Recuperando..."
+                        )
+                        updateNotification("${personagem.nome} morto - recuperando")
+                    }
+                    
+                } else {
+                    // Derrota
+                    personagemMorto = true
+                    tempoMorte = System.currentTimeMillis()
+                    personagem.pvAtuais = 0
+                    
+                    mostrarNotificacao(
+                        "Personagem Derrotado", 
+                        "${personagem.nome} foi derrotado! Recuperando em 30 segundos..."
+                    )
+                    updateNotification("${personagem.nome} derrotado - recuperando")
+                }
+            }
+        )
     }
     
-    private fun verificarSubidaNivel(personagemAtual: Personagem) {
-        val xpProximoNivel = personagemAtual.classe.xpParaProximoNivel(personagemAtual.nivel)
+    private fun verificarSubidaNivel(personagem: Personagem) {
+        val xpProximoNivel = personagem.classe.xpParaProximoNivel(personagem.nivel)
         
-        if (personagemAtual.experiencia >= xpProximoNivel) {
-            personagemAtual.nivel++
-            personagemAtual.pvMaximos += personagemAtual.classe.dadoVida
-            personagemAtual.pvAtuais = personagemAtual.pvMaximos
+        if (personagem.experiencia >= xpProximoNivel) {
+            personagem.nivel++
+            personagem.pvMaximos += personagem.classe.dadoVida
+            personagem.pvAtuais = personagem.pvMaximos
             
-            mostrarNotificacao("Old Dragon - Novo Nível!", 
-                "${personagemAtual.nome} alcançou o nível ${personagemAtual.nivel}!")
+            mostrarNotificacao(
+                "Novo Nível!", 
+                "${personagem.nome} alcançou o nível ${personagem.nivel}!"
+            )
         }
     }
     
-    private fun atualizarNotificacao(mensagem: String) {
-        val notification = NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("Old Dragon - Modo Aventura")
-            .setContentText(mensagem)
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                CHANNEL_ID,
+                "Modo Aventura",
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                description = "Notificações do modo aventura"
+            }
+            
+            val notificationManager = getSystemService(NotificationManager::class.java)
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+    
+    private fun createNotification(text: String): Notification {
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        val pendingIntent = PendingIntent.getActivity(
+            this, 0, intent, 
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        
+        return NotificationCompat.Builder(this, CHANNEL_ID)
+            .setContentTitle("Old Dragon - Aventura")
+            .setContentText(text)
             .setSmallIcon(android.R.drawable.ic_media_play)
+            .setContentIntent(pendingIntent)
             .build()
-        
-        startForeground(NOTIFICATION_ID, notification)
+    }
+    
+    private fun updateNotification(text: String) {
+        val notification = createNotification(text)
+        val notificationManager = getSystemService(NotificationManager::class.java)
+        notificationManager.notify(NOTIFICATION_ID, notification)
     }
     
     private fun mostrarNotificacao(titulo: String, mensagem: String) {
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        val pendingIntent = PendingIntent.getActivity(
+            this, 0, intent, 
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(titulo)
             .setContentText(mensagem)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setContentIntent(pendingIntent)
             .setAutoCancel(true)
             .build()
         
-        // Em um app real, você usaria NotificationManager aqui
-        // Para fins educacionais, vamos apenas logar
-        println("NOTIFICAÇÃO: $titulo - $mensagem")
+        val notificationManager = getSystemService(NotificationManager::class.java)
+        notificationManager.notify(System.currentTimeMillis().toInt(), notification)
     }
     
     override fun onDestroy() {

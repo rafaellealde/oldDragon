@@ -1,12 +1,14 @@
 // model/Classe.kt
 package com.olddragon.model
 
+import java.io.Serializable
+
 abstract class Classe(
     val nome: String,
     val dadoVida: Int,
     val tabelaXP: Map<Int, Int>,
     val habilidades: List<String>
-) {
+) : Serializable {
     abstract fun calcularPVBase(): Int
     abstract fun podeUsarArma(arma: String): Boolean
     abstract fun podeUsarArmadura(armadura: String): Boolean

@@ -16,6 +16,7 @@ import com.olddragon.model.raca.Anao
 import com.olddragon.model.raca.Elfo
 import com.olddragon.model.raca.Halfling
 import com.olddragon.model.raca.Humano
+import com.olddragon.viewmodel.PersonagemRepository
 import kotlin.random.Random
 
 class CriacaoPersonagemViewModel : ViewModel() {
@@ -154,6 +155,11 @@ class CriacaoPersonagemViewModel : ViewModel() {
     }
     
     fun finalizarCriacao() {
+        val personagemFinal = _estadoPersonagem.value.copy(
+            id = System.currentTimeMillis(),
+            pvAtuais = _estadoPersonagem.value.pvMaximos
+        )
+        PersonagemRepository.adicionarPersonagem(personagemFinal)
         _etapaAtual.value = 6
     }
     

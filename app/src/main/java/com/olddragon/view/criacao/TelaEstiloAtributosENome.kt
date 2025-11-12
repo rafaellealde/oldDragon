@@ -16,7 +16,8 @@ import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
 @Composable
 fun TelaEstiloAtributosENome(
     personagem: Personagem,
-    viewModel: CriacaoPersonagemViewModel
+    viewModel: CriacaoPersonagemViewModel,
+    onBack: () -> Unit
 ) {
     var nome by remember { mutableStateOf(personagem.nome) }
     var estiloSelecionado by remember { mutableStateOf("") }
@@ -73,16 +74,23 @@ fun TelaEstiloAtributosENome(
         
         Spacer(modifier = Modifier.weight(1f))
         
-        Button(
-            onClick = { 
-                if (estiloSelecionado.isNotBlank()) {
-                    viewModel.selecionarEstiloAtributos(estiloSelecionado, nome)
-                }
-            },
+        Row(
             modifier = Modifier.fillMaxWidth(),
-            enabled = nome.isNotBlank() && estiloSelecionado.isNotBlank()
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text("Próximo")
+            Button(onClick = onBack) {
+                Text("Voltar")
+            }
+            Button(
+                onClick = { 
+                    if (estiloSelecionado.isNotBlank()) {
+                        viewModel.selecionarEstiloAtributos(estiloSelecionado, nome)
+                    }
+                },
+                enabled = nome.isNotBlank() && estiloSelecionado.isNotBlank()
+            ) {
+                Text("Próximo")
+            }
         }
     }
 }

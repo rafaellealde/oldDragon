@@ -7,6 +7,7 @@ import com.olddragon.model.raca.Humano
 import com.olddragon.model.raca.Elfo
 import com.olddragon.model.raca.Anao
 import com.olddragon.model.raca.Halfling
+import java.io.Serializable
 
 data class Personagem(
     val id: Long = 0,
@@ -20,7 +21,7 @@ data class Personagem(
     var pvAtuais: Int = 0,
     var pvMaximos: Int = 0,
     val emAventura: Boolean = false
-) {
+) : Serializable {
     fun calcularPV(): Int {
         val pvBase = classe.calcularPVBase()
         return maxOf(1, pvBase + atributos.calcularModificador(atributos.CON))

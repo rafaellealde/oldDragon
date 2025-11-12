@@ -1,0 +1,2566 @@
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/assets/clerigo_magias.json ---
+
+{
+  "magias": [
+    {
+      "nome": "Curar Ferimentos Leves",
+      "tipo": "cura",
+      "cura": "1d8 + SAB",
+      "dano": null,
+      "nivel": 1,
+      "descricao": "Cura ferimentos superficiais de um aliado"
+    },
+    {
+      "nome": "Bênção",
+      "tipo": "buff",
+      "cura": null,
+      "dano": null,
+      "nivel": 1,
+      "descricao": "Aliados próximos recebem +1 em ataques por 1 minuto"
+    },
+    {
+      "nome": "Proteção contra o Mal",
+      "tipo": "defesa",
+      "cura": null,
+      "dano": null,
+      "nivel": 1,
+      "descricao": "Protege contra ataques de criaturas do mal"
+    },
+    {
+      "nome": "Curar Ferimentos Moderados",
+      "tipo": "cura",
+      "cura": "2d8 + SAB",
+      "dano": null,
+      "nivel": 3,
+      "descricao": "Cura ferimentos moderados de um aliado"
+    },
+    {
+      "nome": "Chama Sagrada",
+      "tipo": "dano",
+      "cura": null,
+      "dano": "2d6 + SAB",
+      "nivel": 3,
+      "descricao": "Invoca chamas divinas que queimam inimigos"
+    },
+    {
+      "nome": "Curar Ferimentos Graves",
+      "tipo": "cura",
+      "cura": "3d8 + SAB",
+      "dano": null,
+      "nivel": 5,
+      "descricao": "Cura ferimentos graves de um aliado"
+    },
+    {
+      "nome": "Raio Solar",
+      "tipo": "dano",
+      "cura": null,
+      "dano": "4d6 + SAB",
+      "nivel": 5,
+      "descricao": "Um raio de luz solar queima inimigos"
+    },
+    {
+      "nome": "Ressurreição",
+      "tipo": "cura",
+      "cura": "PV_MAX",
+      "dano": null,
+      "nivel": 7,
+      "descricao": "Ressuscita um aliado recentemente falecido"
+    },
+    {
+      "nome": "Julgamento Divino",
+      "tipo": "dano",
+      "cura": null,
+      "dano": "6d8 + SAB",
+      "nivel": 7,
+      "descricao": "Um poderoso julgamento divino sobre os inimigos"
+    },
+    {
+      "nome": "Cura Completa",
+      "tipo": "cura",
+      "cura": "PV_MAX",
+      "dano": null,
+      "nivel": 9,
+      "descricao": "Cura todos os ferimentos do grupo"
+    }
+  ]
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/assets/guerreiro_golpes.json ---
+
+{
+  "golpes": [
+    {
+      "nome": "Golpe Básico",
+      "tipo": "dano",
+      "dano": "1d8 + FOR",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Um ataque corpo a corpo básico com sua arma"
+    },
+    {
+      "nome": "Investida",
+      "tipo": "dano",
+      "dano": "1d10 + FOR",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Avança rapidamente contra o inimigo"
+    },
+    {
+      "nome": "Golpe Poderoso",
+      "tipo": "dano",
+      "dano": "2d6 + FOR",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Um golpe carregado com força total"
+    },
+    {
+      "nome": "Ataque Duplo",
+      "tipo": "dano",
+      "dano": "1d8 + FOR (x2)",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Dois ataques rápidos consecutivos"
+    },
+    {
+      "nome": "Giro da Morte",
+      "tipo": "dano",
+      "dano": "2d8 + FOR",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Gira atacando todos os inimigos próximos"
+    },
+    {
+      "nome": "Golpe Esmagador",
+      "tipo": "dano",
+      "dano": "3d6 + FOR",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Um golpe tão forte que pode atordoar o inimigo"
+    },
+    {
+      "nome": "Fúria do Guerreiro",
+      "tipo": "dano",
+      "dano": "3d8 + FOR",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Entra em fúria, aumentando o dano drasticamente"
+    },
+    {
+      "nome": "Ataque Triplo",
+      "tipo": "dano",
+      "dano": "1d8 + FOR (x3)",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Três ataques extremamente rápidos"
+    },
+    {
+      "nome": "Golpe Final",
+      "tipo": "dano",
+      "dano": "4d10 + FOR",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Um golpe devastador que consome toda a energia"
+    },
+    {
+      "nome": "Tempestade de Aço",
+      "tipo": "dano",
+      "dano": "2d10 + FOR (área)",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Múltiplos golpes contra todos os inimigos ao redor"
+    }
+  ]
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/assets/ladrao_habilidades.json ---
+
+{
+  "habilidades": [
+    {
+      "nome": "Ataque Furtivo",
+      "tipo": "dano",
+      "dano": "1d6 + DES",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Ataque sorrateiro que causa dano extra"
+    },
+    {
+      "nome": "Tiro Preciso",
+      "tipo": "dano",
+      "dano": "1d8 + DES",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Um disparo à distância com precisão mortal"
+    },
+    {
+      "nome": "Ataque Furtivo Melhorado",
+      "tipo": "dano",
+      "dano": "2d6 + DES",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Ataque furtivo com dano significativamente maior"
+    },
+    {
+      "nome": "Tiro Rápido",
+      "tipo": "dano",
+      "dano": "1d6 + DES (x2)",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Dois disparos rápidos consecutivos"
+    },
+    {
+      "nome": "Ataque das Sombras",
+      "tipo": "dano",
+      "dano": "3d6 + DES",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Ataque das sombras com dano crítico aumentado"
+    },
+    {
+      "nome": "Chuva de Flechas",
+      "tipo": "dano",
+      "dano": "2d8 + DES (área)",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Múltiplos disparos contra vários alvos"
+    },
+    {
+      "nome": "Golpe Traiçoeiro",
+      "tipo": "dano",
+      "dano": "4d6 + DES",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Um golpe que ignora parte da defesa do inimigo"
+    },
+    {
+      "nome": "Tiro Certeiro",
+      "tipo": "dano",
+      "dano": "3d8 + DES",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Um disparo que nunca erra o alvo"
+    },
+    {
+      "nome": "Assassinato",
+      "tipo": "dano",
+      "dano": "5d8 + DES",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Ataque fatal que pode eliminar instantaneamente"
+    },
+    {
+      "nome": "Saraivada de Projéteis",
+      "tipo": "dano",
+      "dano": "3d10 + DES (área)",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Dispara projéteis em todos os inimigos visíveis"
+    }
+  ]
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/MainActivity.kt ---
+
+package com.olddragon
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
+import com.olddragon.service.NotificationChannelCreator
+import com.olddragon.view.TelaCriacaoPersonagem
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Criar canal de notificação
+        NotificationChannelCreator.createAventuraChannel(this)
+
+        setContent {
+            OldDragonTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    TelaCriacaoPersonagem()
+                }
+            }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/Theme.kt ---
+
+package com.olddragon
+
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+
+@Composable
+fun OldDragonTheme(
+    content: @Composable () -> Unit
+) {
+    MaterialTheme(
+        colorScheme = lightColorScheme(
+            primary = Color(0xFF8B4513),
+            secondary = Color(0xFFCD853F),
+            background = Color(0xFFF5F5DC)
+        ),
+        content = content
+    )
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/Atributos.kt ---
+
+package com.olddragon.model
+
+import java.io.Serializable
+
+data class Atributos( 
+    val FOR: Int = 0,
+    val DES: Int = 0,
+    val CON: Int = 0,
+    val INT: Int = 0,
+    val SAB: Int = 0,
+    val CAR: Int = 0
+) : Serializable {
+    fun calcularModificador(valor: Int): Int = when {
+        valor <= 3 -> -3
+        valor <= 5 -> -2
+        valor <= 8 -> -1
+        valor <= 12 -> 0
+        valor <= 14 -> 1
+        valor <= 16 -> 2
+        valor <= 18 -> 3
+        else -> 4
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/Classe.kt ---
+
+// model/Classe.kt
+package com.olddragon.model
+
+import java.io.Serializable
+
+abstract class Classe( 
+    val nome: String,
+    val dadoVida: Int,
+    val tabelaXP: Map<Int, Int>,
+    val habilidades: List<String>
+) : Serializable {
+    abstract fun calcularPVBase(): Int
+    abstract fun podeUsarArma(arma: String): Boolean
+    abstract fun podeUsarArmadura(armadura: String): Boolean
+    
+    fun xpParaProximoNivel(nivelAtual: Int): Int {
+        return tabelaXP[nivelAtual + 1] ?: 0
+    }
+    
+    fun xpParaNivel(nivel: Int): Int {
+        return tabelaXP[nivel] ?: 0
+    }
+    
+    companion object {
+        val TODAS: List<Classe> by lazy {
+            listOf(
+                com.olddragon.model.classe.Guerreiro(),
+                com.olddragon.model.classe.Clerigo(),
+                com.olddragon.model.classe.Ladrao()
+            )
+        }
+        
+        fun porNome(nome: String): Classe? {
+            return TODAS.find { it.nome == nome }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/Habilidade.kt ---
+
+package com.olddragon.model
+
+data class HabilidadeData(
+    val nome: String,
+    val tipo: String,
+    val dano: String?,
+    val cura: String?,
+    val nivel: Int,
+    val descricao: String
+)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/Personagem.kt ---
+
+package com.olddragon.model
+
+import com.olddragon.model.classe.Guerreiro
+import com.olddragon.model.classe.Clerigo
+import com.olddragon.model.classe.Ladrao
+import com.olddragon.model.raca.Humano
+import com.olddragon.model.raca.Elfo
+import com.olddragon.model.raca.Anao
+import com.olddragon.model.raca.Halfling
+import java.io.Serializable
+
+data class Personagem(
+    val id: Long = 0,
+    val nome: String = "",
+    var nivel: Int = 1,
+    val raca: Raca = Humano(),
+    val classe: Classe = Guerreiro(),
+    val alinhamento: String = "Neutro",
+    val atributos: Atributos = Atributos(),
+    var experiencia: Int = 0,
+    var pvAtuais: Int = 0,
+    var pvMaximos: Int = 0,
+    val emAventura: Boolean = false
+) : Serializable {
+    fun calcularPV(): Int {
+        val pvBase = classe.calcularPVBase()
+        return maxOf(1, pvBase + atributos.calcularModificador(atributos.CON))
+    }
+    
+    fun calcularCA(): Int {
+        return 10 + atributos.calcularModificador(atributos.DES)
+    }
+    
+    fun calcularBAC(): Int {
+        return nivel + atributos.calcularModificador(atributos.FOR)
+    }
+    
+    fun calcularBAD(): Int {
+        return nivel + atributos.calcularModificador(atributos.DES)
+    }
+    
+    fun xpParaProximoNivel(): Int {
+        return classe.xpParaProximoNivel(nivel)
+    }
+    
+    fun podeSubirDeNivel(): Boolean {
+        return experiencia >= xpParaProximoNivel()
+    }
+    
+    fun estaVivo(): Boolean = pvAtuais > 0
+    fun precisaRecuperar(): Boolean = pvAtuais <= 0
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/Raca.kt ---
+
+// model/Raca.kt
+package com.olddragon.model
+
+import java.io.Serializable
+
+abstract class Raca(
+    val nome: String,
+    val movimentoBase: Int,
+    val infravisao: Int,
+    val alinhamentoTendencia: String,
+    val habilidades: List<String>
+) : Serializable {
+    abstract fun podeUsarArmaEspecial(arma: String): Boolean
+    abstract fun podeUsarArmaduraEspecial(armadura: String): Boolean
+    abstract fun calcularBonusJP(tipoJP: String): Int
+    
+    fun temInfravisao(): Boolean = infravisao > 0
+    
+    companion object {
+        val TODAS: List<Raca> by lazy {
+            listOf(
+                com.olddragon.model.raca.Humano(),
+                com.olddragon.model.raca.Elfo(),
+                com.olddragon.model.raca.Anao(),
+                com.olddragon.model.raca.Halfling()
+            )
+        }
+        
+        fun porNome(nome: String): Raca? {
+            return TODAS.find { it.nome == nome }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/classe/Clerigo.kt ---
+
+// model/classe/Clerigo.kt
+package com.olddragon.model.classe
+
+import com.olddragon.model.Classe
+import com.olddragon.model.HabilidadeData
+import com.olddragon.service.HabilidadeLoader
+
+class Clerigo : Classe(
+    nome = "Clérigo",
+    dadoVida = 8,
+    tabelaXP = mapOf(
+        1 to 0,
+        2 to 1500,
+        3 to 3000,
+        4 to 5500,
+        5 to 8500,
+        6 to 17000,
+        7 to 27000,
+        8 to 37000,
+        9 to 47000,
+        10 to 94000
+    ),
+    habilidades = listOf("Magias Divinas")
+) {
+    override fun calcularPVBase(): Int = 8
+    
+    override fun podeUsarArma(arma: String): Boolean {
+        return when (arma) {
+            "impactante" -> true
+            else -> false
+        }
+    }
+    
+    override fun podeUsarArmadura(armadura: String): Boolean = true
+    
+    fun getHabilidadesDisponiveis(nivel: Int, loader: HabilidadeLoader): List<HabilidadeData> {
+        return loader.getHabilidadesPorNivel("Clérigo", nivel)
+    }
+    
+    companion object {
+        val MAGIAS_DIVINAS = listOf(
+            "Curar Ferimentos",
+            "Proteção contra o Mal",
+            "Bênção"
+        )
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/classe/Guerreiro.kt ---
+
+// model/classe/Guerreiro.kt
+package com.olddragon.model.classe
+
+import com.olddragon.model.Classe
+import com.olddragon.model.HabilidadeData
+import com.olddragon.service.HabilidadeLoader
+
+class Guerreiro : Classe(
+    nome = "Guerreiro",
+    dadoVida = 10,
+    tabelaXP = mapOf(
+        1 to 0,
+        2 to 2000,
+        3 to 4000,
+        4 to 7000,
+        5 to 10000,
+        6 to 20000,
+        7 to 30000,
+        8 to 40000,
+        9 to 50000,
+        10 to 100000
+    ),
+    habilidades = listOf("Golpes Corporais")
+) {
+    override fun calcularPVBase(): Int = 10
+    
+    override fun podeUsarArma(arma: String): Boolean = true
+    
+    override fun podeUsarArmadura(armadura: String): Boolean = true
+    
+    fun getHabilidadesDisponiveis(nivel: Int, loader: HabilidadeLoader): List<HabilidadeData> {
+        return loader.getHabilidadesPorNivel("Guerreiro", nivel)
+    }
+    
+    companion object {
+        val HABILIDADES_ESPECIAIS = listOf(
+            "Ataque Extra (Nível 6)",
+            "Maestria em Arma Avançada (Nível 10)"
+        )
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/classe/Ladrao.kt ---
+
+// model/classe/Ladrao.kt
+package com.olddragon.model.classe
+
+import com.olddragon.model.Classe
+import com.olddragon.model.HabilidadeData
+import com.olddragon.service.HabilidadeLoader
+
+class Ladrao : Classe(
+    nome = "Ladrão",
+    dadoVida = 6,
+    tabelaXP = mapOf(
+        1 to 0,
+        2 to 1000,
+        3 to 2000,
+        4 to 4000,
+        5 to 7000,
+        6 to 14000,
+        7 to 24000,
+        8 to 34000,
+        9 to 44000,
+        10 to 88000
+    ),
+    habilidades = listOf("Habilidades de Ladrão")
+) {
+    override fun calcularPVBase(): Int = 6
+    
+    override fun podeUsarArma(arma: String): Boolean {
+        return when (arma) {
+            "pequena", "media" -> true
+            else -> false
+        }
+    }
+    
+    override fun podeUsarArmadura(armadura: String): Boolean {
+        return when (armadura) {
+            "leve" -> true
+            else -> false
+        }
+    }
+    
+    fun getHabilidadesDisponiveis(nivel: Int, loader: HabilidadeLoader): List<HabilidadeData> {
+        return loader.getHabilidadesPorNivel("Ladrão", nivel)
+    }
+    
+    companion object {
+        val TALENTOS = listOf(
+            "Armadilha",
+            "Arrombar",
+            "Escalar",
+            "Furtividade",
+            "Punga"
+        )
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/combate/Combate.kt ---
+
+// model/combate/Combate.kt
+package com.olddragon.model.combate
+
+import com.olddragon.model.Personagem
+import kotlin.random.Random
+
+data class Inimigo(
+    val nome: String,
+    val nivel: Int,
+    var pvAtuais: Int,
+    val pvMaximos: Int,
+    val ca: Int,
+    val danoBase: String,
+    val xpRecompensa: Int
+) {
+    fun estaVivo(): Boolean = pvAtuais > 0
+}
+
+data class ResultadoCombate(
+    val vitoria: Boolean,
+    val xpGanha: Int,
+    val danoSofrido: Int,
+    val rounds: Int
+)
+
+// Habilidades das classes
+data class Habilidade(
+    val nome: String,
+    val tipo: String, // "dano" ou "defesa"
+    val dano: String? = null,
+    val cura: String? = null,
+    val defesa: Int? = null
+)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/inventario/Inventario.kt ---
+
+// model/inventario/Inventario.kt
+package com.olddragon.model.inventario
+
+import com.olddragon.model.item.Item
+
+data class Dinheiro(
+    var po: Int = 0,
+    var pp: Int = 0,
+    var pc: Int = 0
+) {
+    fun totalEmPo(): Double {
+        return po + (pp * 0.1) + (pc * 0.01)
+    }
+    
+    fun adicionarDinheiro(po: Int = 0, pp: Int = 0, pc: Int = 0) {
+        this.po += po
+        this.pp += pp
+        this.pc += pc
+        normalizar()
+    }
+    
+    fun removerDinheiro(po: Int = 0, pp: Int = 0, pc: Int = 0): Boolean {
+        val totalNecessario = po + (pp * 0.1) + (pc * 0.01)
+        if (totalEmPo() >= totalNecessario) {
+            this.po -= po
+            this.pp -= pp
+            this.pc -= pc
+            normalizar()
+            return true
+        }
+        return false
+    }
+    
+    private fun normalizar() {
+        while (pc >= 100) {
+            pc -= 100
+            pp += 1
+        }
+        while (pp >= 10) {
+            pp -= 10
+            po += 1
+        }
+    }
+}
+
+data class Inventario(
+    val dinheiro: Dinheiro = Dinheiro(),
+    val itens: MutableList<Item> = mutableListOf(),
+    val capacidadeMaxima: Int = 100,
+    var cargaAtual: Int = 0
+) {
+    fun adicionarItem(item: Item, peso: Int = 1): Boolean {
+        if (cargaAtual + peso <= capacidadeMaxima) {
+            itens.add(item)
+            cargaAtual += peso
+            return true
+        }
+        return false
+    }
+    
+    fun removerItem(item: Item): Boolean {
+        return itens.remove(item)
+    }
+    
+    fun encontrarItemPorNome(nome: String): Item? {
+        return itens.find { it.nome == nome }
+    }
+    
+    fun getArmas(): List<Item> {
+        return itens.filter { it is com.olddragon.model.item.Arma }
+    }
+    
+    fun getArmaduras(): List<Item> {
+        return itens.filter { it is com.olddragon.model.item.Armadura }
+    }
+    
+    fun getItensGerais(): List<Item> {
+        return itens.filter { it is com.olddragon.model.item.ItemGeral }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/item/Arma.kt ---
+
+// model/item/Arma.kt
+package com.olddragon.model.item
+
+data class Arma(
+    override val nome: String,
+    override val descricao: String,
+    override val custo: String,
+    override val peso: String,
+    val dano: String,
+    val carga: Int,
+    val tipo: String,
+    val propriedades: List<String>
+) : Item(nome, descricao, custo, peso)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/item/Armadura.kt ---
+
+// model/item/Armadura.kt
+package com.olddragon.model.item
+
+data class Armadura(
+    override val nome: String,
+    override val descricao: String,
+    override val custo: String,
+    override val peso: String,
+    val ca: String,
+    val carga: Int,
+    val tipo: String
+) : Item(nome, descricao, custo, peso)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/item/Item.kt ---
+
+// model/item/Item.kt
+package com.olddragon.model.item
+
+sealed class Item(
+    open val nome: String,
+    open val descricao: String,
+    open val custo: String,
+    open val peso: String
+)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/item/ItemGeral.kt ---
+
+// model/item/ItemGeral.kt
+package com.olddragon.model.item
+
+data class ItemGeral(
+    override val nome: String,
+    override val descricao: String,
+    override val custo: String,
+    override val peso: String,
+    val categoria: String
+) : Item(nome, descricao, custo, peso)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/item/ItemRacial.kt ---
+
+// model/item/ItemRacial.kt
+package com.olddragon.model.item
+
+data class ItemRacial(
+    val raca: String,
+    val descricao: String,
+    val efeitoArmas: String,
+    val efeitoArmadura: String
+)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/item/Material.kt ---
+
+// model/item/Material.kt
+package com.olddragon.model.item
+
+data class Material(
+    val nome: String,
+    val efeito: String,
+    val beneficio: String,
+    val precoMultiplicador: Double,
+    val raridade: String = "Comum"
+)
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/raca/Anao.kt ---
+
+// model/raca/Anao.kt
+package com.olddragon.model.raca
+
+import com.olddragon.model.Raca
+
+class Anao : Raca(
+    nome = "Anão",
+    movimentoBase = 6,
+    infravisao = 18,
+    alinhamentoTendencia = "Ordeiro",
+    habilidades = listOf("Mineradores", "Vigoroso", "Armas Anãs", "Inimigos Naturais")
+) {
+    override fun podeUsarArmaEspecial(arma: String): Boolean {
+        return when (arma) {
+            "anã" -> true // Armas grandes anãs são consideradas médias
+            else -> false
+        }
+    }
+    
+    override fun podeUsarArmaduraEspecial(armadura: String): Boolean = true
+    
+    override fun calcularBonusJP(tipoJP: String): Int {
+        return when (tipoJP) {
+            "JPC" -> 1 // +1 em JPC
+            else -> 0
+        }
+    }
+    
+    fun calcularBonusAtaqueInimigo(inimigo: String): Boolean {
+        val inimigosNaturais = listOf("orc", "ogro", "hobgoblin")
+        return inimigosNaturais.contains(inimigo.lowercase())
+    }
+    
+    fun detectarAnomaliasPedra(procurandoAtivamente: Boolean = false): Boolean {
+        // Lógica para detectar anomalias em pedras
+        return true // Implementar lógica real depois
+    }
+    
+    companion object {
+        val INIMIGOS_NATURAIS = listOf("Orcs", "Ogro", "Hobgoblin")
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/raca/Elfo.kt ---
+
+// model/raca/Elfo.kt
+package com.olddragon.model.raca
+
+import com.olddragon.model.Raca
+
+class Elfo : Raca(
+    nome = "Elfo",
+    movimentoBase = 9,
+    infravisao = 18,
+    alinhamentoTendencia = "Neutro",
+    habilidades = listOf("Percepção Natural", "Graciosos", "Arma Racial", "Imunidades")
+) {
+    override fun podeUsarArmaEspecial(arma: String): Boolean {
+        return when (arma) {
+            "arco" -> true
+            else -> false
+        }
+    }
+    
+    override fun podeUsarArmaduraEspecial(armadura: String): Boolean = true
+    
+    override fun calcularBonusJP(tipoJP: String): Int {
+        return when (tipoJP) {
+            "JPD" -> 1 // +1 em JPD
+            else -> 0
+        }
+    }
+    
+    fun calcularBonusDanoArco(): Int = 1 // +1 de dano com arcos
+    
+    fun detectarPortaSecreta(procurandoAtivamente: Boolean = false): Boolean {
+        // Lógica para detectar portas secretas
+        return true // Implementar lógica real depois
+    }
+    
+    companion object {
+        val IMUNIDADES = listOf("Sono", "Paralisia de Ghoul")
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/raca/Halfling.kt ---
+
+// model/raca/Halfling.kt
+package com.olddragon.model.raca
+
+import com.olddragon.model.Raca
+
+class Halfling : Raca(
+    nome = "Halfling",
+    movimentoBase = 6,
+    infravisao = 0,
+    alinhamentoTendencia = "Neutro",
+    habilidades = listOf("Furtivos", "Destemidos", "Bons de Mira", "Pequenos")
+) {
+    override fun podeUsarArmaEspecial(arma: String): Boolean {
+        return when (arma) {
+            "arremesso" -> true
+            else -> false
+        }
+    }
+    
+    override fun podeUsarArmaduraEspecial(armadura: String): Boolean {
+        return when (armadura) {
+            "couro" -> true
+            else -> false
+        }
+    }
+    
+    override fun calcularBonusJP(tipoJP: String): Int {
+        return when (tipoJP) {
+            "JPS" -> 1 // +1 em JPS
+            else -> 0
+        }
+    }
+    
+    fun calcularBonusFurtividade(): Int = 1 // +1 em furtividade
+    
+    fun ataqueFacilArremesso(): Boolean = true
+    
+    fun ataqueDificilContraCriaturaGrande(): Boolean = true
+    
+    companion object {
+        val RESTRICOES_ARMAS = listOf("grande")
+        val RESTRICOES_ARMADURAS = listOf("media", "pesada")
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/model/raca/Humano.kt ---
+
+// model/raca/Humano.kt
+package com.olddragon.model.raca
+
+import com.olddragon.model.Raca
+
+class Humano : Raca(
+    nome = "Humano",
+    movimentoBase = 9,
+    infravisao = 0,
+    alinhamentoTendencia = "Qualquer",
+    habilidades = listOf("Aprendizado", "Adaptabilidade")
+) {
+    override fun podeUsarArmaEspecial(arma: String): Boolean = true
+    
+    override fun podeUsarArmaduraEspecial(armadura: String): Boolean = true
+    
+    override fun calcularBonusJP(tipoJP: String): Int {
+        return when (tipoJP) {
+            "JPD", "JPM", "JPV", "JPS", "JPC" -> 1 // Humanos escolhem uma JP para receber +1
+            else -> 0
+        }
+    }
+    
+    fun calcularBonusXP(xpBase: Int): Int {
+        return (xpBase * 0.10).toInt() // +10% de XP
+    }
+    
+    companion object {
+        val BONUS_ADAPTABILIDADE = "+1 em uma JP à escolha"
+        val BONUS_APRENDIZADO = "+10% de XP"
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/service/AventuraService.kt ---
+
+// service/AventuraService.kt
+package com.olddragon.service
+
+import android.app.*
+import android.content.Context
+import android.content.Intent
+import android.os.IBinder
+import android.os.Build
+import androidx.core.app.NotificationCompat
+import com.olddragon.MainActivity
+import com.olddragon.model.Personagem
+import kotlinx.coroutines.*
+import java.util.concurrent.TimeUnit
+
+class AventuraService : Service() {
+    private val serviceScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
+    private var personagem: Personagem? = null
+    private var emAventura = false
+    private var tempoUltimoCombate = 0L
+    private var personagemMorto = false
+    private var tempoMorte = 0L
+    
+    companion object {
+        const val NOTIFICATION_ID = 123
+        const val CHANNEL_ID = "aventura_channel"
+        
+        fun startService(context: Context, personagem: Personagem) {
+            val intent = Intent(context, AventuraService::class.java).apply {
+                putExtra("personagem", personagem)
+            }
+            context.startService(intent)
+        }
+        
+        fun stopService(context: Context) {
+            val intent = Intent(context, AventuraService::class.java)
+            context.stopService(intent)
+        }
+    }
+    
+    override fun onCreate() {
+        super.onCreate()
+        createNotificationChannel()
+    }
+    
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        personagem = intent?.getSerializableExtra("personagem") as? Personagem
+        startAventura()
+        
+        // Criar notificação em primeiro plano
+        val notification = createNotification("${personagem?.nome} está em aventura...")
+        startForeground(NOTIFICATION_ID, notification)
+        
+        return START_STICKY
+    }
+    
+    override fun onBind(intent: Intent?): IBinder? = null
+    
+    private fun startAventura() {
+        emAventura = true
+        serviceScope.launch {
+            while (emAventura && personagem != null) {
+                if (!personagemMorto) {
+                    verificarCombate()
+                } else {
+                    verificarRecuperacao()
+                }
+                delay(1000) // Verifica a cada segundo
+            }
+        }
+    }
+    
+    private suspend fun verificarCombate() {
+        val agora = System.currentTimeMillis()
+        val p = personagem ?: return
+        
+        // Calcular intervalo baseado no movimento (9m = 9 segundos)
+        val intervaloCombate = TimeUnit.SECONDS.toMillis(p.raca.movimentoBase.toLong())
+        
+        if (agora - tempoUltimoCombate >= intervaloCombate) {
+            iniciarCombate(p)
+            tempoUltimoCombate = agora
+        }
+    }
+    
+    private suspend fun verificarRecuperacao() {
+        val agora = System.currentTimeMillis()
+        val tempoRecuperacao = TimeUnit.SECONDS.toMillis(30)
+        
+        if (agora - tempoMorte >= tempoRecuperacao) {
+            personagemMorto = false
+            personagem?.pvAtuais = personagem?.pvMaximos ?: 0
+            
+            // Notificar recuperação
+            mostrarNotificacao(
+                "Personagem Recuperado", 
+                "${personagem?.nome} está pronto para nova aventura!"
+            )
+            updateNotification("${personagem?.nome} recuperado - em aventura")
+        }
+    }
+    
+    private suspend fun iniciarCombate(personagem: Personagem) {
+        val combateService = CombateService()
+        val inimigo = combateService.gerarInimigoAleatorio(personagem.nivel)
+        
+        val resultado = combateService.simularCombate(personagem, inimigo)
+        
+        if (resultado.vitoria) {
+            // Vitória
+            personagem.experiencia += resultado.xpGanha
+            personagem.pvAtuais = maxOf(0, personagem.pvAtuais - resultado.danoSofrido)
+            
+            verificarSubidaNivel(personagem)
+            
+            updateNotification("${personagem.nome} venceu! +${resultado.xpGanha} XP")
+            
+            // Se morreu após vencer
+            if (personagem.pvAtuais <= 0) {
+                personagemMorto = true
+                tempoMorte = System.currentTimeMillis()
+                mostrarNotificacao(
+                    "Personagem Morreu", 
+                    "${personagem.nome} morreu após a vitória! Recuperando..."
+                )
+                updateNotification("${personagem.nome} morto - recuperando")
+            }
+            
+        } else {
+            // Derrota
+            personagemMorto = true
+            tempoMorte = System.currentTimeMillis()
+            personagem.pvAtuais = 0
+            
+            mostrarNotificacao(
+                "Personagem Derrotado", 
+                "${personagem.nome} foi derrotado! Recuperando em 30 segundos..."
+            )
+            updateNotification("${personagem.nome} derrotado - recuperando")
+        }
+    }
+    
+    private fun verificarSubidaNivel(personagem: Personagem) {
+        val xpProximoNivel = personagem.classe.xpParaProximoNivel(personagem.nivel)
+        
+        if (personagem.experiencia >= xpProximoNivel) {
+            personagem.nivel++
+            personagem.pvMaximos += personagem.classe.dadoVida
+            personagem.pvAtuais = personagem.pvMaximos
+            
+            mostrarNotificacao(
+                "Novo Nível!", 
+                "${personagem.nome} alcançou o nível ${personagem.nivel}!"
+            )
+        }
+    }
+    
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                CHANNEL_ID,
+                "Modo Aventura",
+                NotificationManager.IMPORTANCE_LOW
+            ).apply {
+                description = "Notificações do modo aventura"
+            }
+            
+            val notificationManager = getSystemService(NotificationManager::class.java)
+            notificationManager.createNotificationChannel(channel)
+        }
+    }
+    
+    private fun createNotification(text: String): Notification {
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        val pendingIntent = PendingIntent.getActivity(
+            this, 0, intent, 
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        
+        return NotificationCompat.Builder(this, CHANNEL_ID)
+            .setContentTitle("Old Dragon - Aventura")
+            .setContentText(text)
+            .setSmallIcon(android.R.drawable.ic_media_play)
+            .setContentIntent(pendingIntent)
+            .build()
+    }
+    
+    private fun updateNotification(text: String) {
+        val notification = createNotification(text)
+        val notificationManager = getSystemService(NotificationManager::class.java)
+        notificationManager.notify(NOTIFICATION_ID, notification)
+    }
+    
+    private fun mostrarNotificacao(titulo: String, mensagem: String) {
+        val intent = Intent(this, MainActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        }
+        val pendingIntent = PendingIntent.getActivity(
+            this, 0, intent, 
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
+        
+        val notification = NotificationCompat.Builder(this, CHANNEL_ID)
+            .setContentTitle(titulo)
+            .setContentText(mensagem)
+            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setContentIntent(pendingIntent)
+            .setAutoCancel(true)
+            .build()
+        
+        val notificationManager = getSystemService(NotificationManager::class.java)
+        notificationManager.notify(System.currentTimeMillis().toInt(), notification)
+    }
+    
+    override fun onDestroy() {
+        super.onDestroy()
+        serviceScope.cancel()
+        emAventura = false
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/service/CombateService.kt ---
+
+// service/CombateService.kt
+package com.olddragon.service
+
+import com.olddragon.model.Personagem
+import com.olddragon.model.combate.*
+import kotlin.random.Random
+
+class CombateService {
+    
+    fun simularCombate(personagem: Personagem, inimigo: Inimigo): ResultadoCombate {
+        var personagemPV = personagem.pvAtuais
+        var inimigoPV = inimigo.pvAtuais
+        var rounds = 0
+        
+        while (personagemPV > 0 && inimigoPV > 0) {
+            rounds++
+            
+            // Turno do personagem
+            val danoPersonagem = calcularAtaquePersonagem(personagem, inimigo)
+            if (danoPersonagem > 0) {
+                inimigoPV -= danoPersonagem
+            }
+            
+            if (inimigoPV <= 0) break
+            
+            // Turno do inimigo
+            val danoInimigo = calcularAtaqueInimigo(inimigo, personagem)
+            if (danoInimigo > 0) {
+                personagemPV -= danoInimigo
+            }
+        }
+        
+        val vitoria = inimigoPV <= 0
+        val danoSofrido = personagem.pvAtuais - personagemPV
+        
+        return ResultadoCombate(
+            vitoria = vitoria,
+            xpGanha = if (vitoria) inimigo.xpRecompensa else 0,
+            danoSofrido = danoSofrido,
+            rounds = rounds
+        )
+    }
+    
+    private fun calcularAtaquePersonagem(personagem: Personagem, inimigo: Inimigo): Int {
+        // Rolagem de ataque (d20 + modificador)
+        val rolagemAtaque = Random.nextInt(1, 21)
+        val modificador = when (personagem.classe.nome) {
+            "Guerreiro" -> personagem.atributos.calcularModificador(personagem.atributos.FOR)
+            "Clérigo" -> personagem.atributos.calcularModificador(personagem.atributos.SAB)
+            "Ladrão" -> personagem.atributos.calcularModificador(personagem.atributos.DES)
+            else -> 0
+        }
+        
+        val totalAtaque = rolagemAtaque + modificador
+        
+        // Verificar se acertou
+        if (totalAtaque >= inimigo.ca) {
+            // Calcular dano (d8 + modificador)
+            val danoBase = Random.nextInt(1, 9)
+            return danoBase + modificador
+        }
+        
+        return 0 // Errou o ataque
+    }
+    
+    private fun calcularAtaqueInimigo(inimigo: Inimigo, personagem: Personagem): Int {
+        val rolagemAtaque = Random.nextInt(1, 21)
+        val caPersonagem = personagem.calcularCA()
+        
+        if (rolagemAtaque >= caPersonagem) {
+            // Dano do inimigo baseado no nível
+            val danoBase = when (inimigo.danoBase) {
+                "1d8" -> Random.nextInt(1, 9)
+                "2d4" -> Random.nextInt(1, 5) + Random.nextInt(1, 5)
+                else -> Random.nextInt(1, 7) // 1d6 padrão
+            }
+            return danoBase
+        }
+        
+        return 0
+    }
+    
+    fun gerarInimigoAleatorio(nivelPersonagem: Int): Inimigo {
+        val nomes = listOf("Goblin", "Orc", "Esqueleto", "Lobisomem", "Aranha Gigante")
+        val nivel = maxOf(1, nivelPersonagem)
+        val pvBase = 15 + (nivel * 3)
+        val ca = 12 + nivel
+        val danos = listOf("1d6", "1d8", "2d4")
+        val xp = nivel * 30
+        
+        return Inimigo(
+            nome = nomes.random(),
+            nivel = nivel,
+            pvAtuais = pvBase,
+            pvMaximos = pvBase,
+            ca = ca,
+            danoBase = danos.random(),
+            xpRecompensa = xp
+        )
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/service/HabilidadeLoader.kt ---
+
+// service/HabilidadeLoader.kt
+package com.olddragon.service
+
+import android.content.Context
+import com.google.gson.Gson
+import com.olddragon.model.HabilidadeData
+
+class HabilidadeLoader(private val context: Context) {
+    private val gson = Gson()
+    
+    fun carregarHabilidadesClerigo(): List<HabilidadeData> {
+        return carregarDoJson("clerigo_magias.json")
+    }
+    
+    fun carregarHabilidadesGuerreiro(): List<HabilidadeData> {
+        return carregarDoJson("guerreiro_golpes.json")
+    }
+    
+    fun carregarHabilidadesLadrao(): List<HabilidadeData> {
+        return carregarDoJson("ladrao_habilidades.json")
+    }
+    
+    private fun carregarDoJson(nomeArquivo: String): List<HabilidadeData> {
+        return try {
+            val jsonString = context.assets.open(nomeArquivo).bufferedReader().use { it.readText() }
+            val data = gson.fromJson(jsonString, Map::class.java)
+            val habilidadesList = data["magias"] ?: data["golpes"] ?: data["habilidades"]
+            gson.fromJson(gson.toJson(habilidadesList), Array<HabilidadeData>::class.java).toList()
+        } catch (e: Exception) {
+            emptyList()
+        }
+    }
+    
+    fun getHabilidadesPorNivel(classe: String, nivelPersonagem: Int): List<HabilidadeData> {
+        val todasHabilidades = when (classe) {
+            "Clérigo" -> carregarHabilidadesClerigo()
+            "Guerreiro" -> carregarHabilidadesGuerreiro()
+            "Ladrão" -> carregarHabilidadesLadrao()
+            else -> emptyList()
+        }
+        
+        return todasHabilidades.filter { it.nivel <= nivelPersonagem }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/service/LojaService.kt ---
+
+// service/LojaService.kt
+package com.olddragon.service
+
+import com.olddragon.model.inventario.Dinheiro
+import com.olddragon.model.inventario.Inventario
+import com.olddragon.model.item.*
+import kotlin.random.Random
+
+class LojaService {
+    
+    fun comprarItem(inventario: Inventario, item: Item, preco: Dinheiro): Boolean {
+        if (inventario.dinheiro.removerDinheiro(preco.po, preco.pp, preco.pc)) {
+            return inventario.adicionarItem(item)
+        }
+        return false
+    }
+    
+    fun venderItem(inventario: Inventario, item: Item): Boolean {
+        if (inventario.removerItem(item)) {
+            val precoVenda = calcularPrecoVenda(item)
+            inventario.dinheiro.adicionarDinheiro(precoVenda.po, precoVenda.pp, precoVenda.pc)
+            return true
+        }
+        return false
+    }
+    
+    private fun calcularPrecoVenda(item: Item): Dinheiro {
+        // Preço de venda é 50% do preço de compra
+        return when (item) {
+            is Arma -> parsePreco(item.custo, 0.5)
+            is Armadura -> parsePreco(item.custo, 0.5)
+            is ItemGeral -> parsePreco(item.custo, 0.5)
+            else -> Dinheiro()
+        }
+    }
+    
+    fun parsePreco(precoString: String, multiplicador: Double = 1.0): Dinheiro {
+        var po = 0
+        var pp = 0
+        var pc = 0
+        
+        val partes = precoString.split(" ")
+        partes.forEach { parte ->
+            when {
+                parte.endsWith("po") -> po = (parte.replace("po", "").trim().toInt() * multiplicador).toInt()
+                parte.endsWith("pp") -> pp = (parte.replace("pp", "").trim().toInt() * multiplicador).toInt()
+                parte.endsWith("pc") -> pc = (parte.replace("pc", "").trim().toInt() * multiplicador).toInt()
+            }
+        }
+        
+        return Dinheiro(po, pp, pc)
+    }
+    
+    fun gerarLootAleatorio(nivel: Int): Item? {
+        val chance = Random.nextDouble(100.0)
+        
+        return when {
+            chance < 40 -> null // Sem loot
+            chance < 70 -> gerarItemGeralAleatorio()
+            chance < 90 -> gerarArmaAleatoria(nivel)
+            else -> gerarArmaduraAleatoria(nivel)
+        }
+    }
+    
+    private fun gerarArmaAleatoria(nivel: Int): Arma {
+        val armasBasicas = listOf(
+            Arma("Adaga", "Pequena, Perfurante", "2 po", "1kg", "1d4", 1, "Pequena", listOf("Arremesso")),
+            Arma("Espada Curta", "Cortante", "6 po", "1kg", "1d6", 1, "Pequena", listOf("Cortante")),
+            Arma("Maça", "Impactante", "6 po", "2kg", "1d8", 2, "Média", listOf("Impactante"))
+        )
+        
+        return armasBasicas.random()
+    }
+    
+    private fun gerarArmaduraAleatoria(nivel: Int): Armadura {
+        val armadurasBasicas = listOf(
+            Armadura("Armadura de Couro", "Leve, Couro", "20 po", "5kg", "+2", 1, "Leve"),
+            Armadura("Cota de Malha", "Média, Metal", "60 po", "10kg", "+4", 2, "Média")
+        )
+        
+        return armadurasBasicas.random()
+    }
+    
+    private fun gerarItemGeralAleatorio(): ItemGeral {
+        val itens = listOf(
+            ItemGeral("Poção de Cura", "Restaura 2d4+2 PV", "25 po", "0.5kg", "Consumível"),
+            ItemGeral("Tocha", "Ilumina 6m", "1 po", "0.5kg", "Utilitário"),
+            ItemGeral("Corda", "15m de comprimento", "1 po", "2kg", "Utilitário")
+        )
+        
+        return itens.random()
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/service/NotificationChannelCreator.kt ---
+
+// service/NotificationChannelCreator.kt
+package com.olddragon.service
+
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
+
+class NotificationChannelCreator {
+    companion object {
+        fun createAventuraChannel(context: Context) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                val channel = NotificationChannel(
+                    "aventura_channel",
+                    "Modo Aventura",
+                    NotificationManager.IMPORTANCE_HIGH
+                ).apply {
+                    description = "Notificações do modo aventura do Old Dragon"
+                }
+                
+                val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+                notificationManager.createNotificationChannel(channel)
+            }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/TelaCriacaoPersonagem.kt ---
+
+// view/TelaCriacaoPersonagem.kt
+package com.olddragon.view
+
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.olddragon.model.Personagem
+import com.olddragon.view.criacao.*
+import com.olddragon.view.home.TelaPrincipal
+import com.olddragon.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaCriacaoPersonagem(
+    viewModel: CriacaoPersonagemViewModel = viewModel()
+) {
+    val estado by viewModel.estadoPersonagem.collectAsState()
+    val etapa by viewModel.etapaAtual.collectAsState()
+    
+    when (etapa) {
+        0 -> TelaEstiloAtributosENome(estado, viewModel)
+        1 -> TelaRaca(estado, viewModel)
+        2 -> TelaClasse(estado, viewModel)
+        3 -> TelaAtributos(estado, viewModel)
+        4 -> TelaAlinhamento(estado, viewModel)
+        5 -> TelaResumo(estado, viewModel)
+        6 -> TelaPrincipal(estado, viewModel)
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/aventura/TelaAventura.kt ---
+
+// view/aventura/TelaAventura.kt
+package com.olddragon.view.aventura
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.olddragon.model.Personagem
+import com.olddragon.viewmodel.AventuraViewModel
+import com.olddragon.viewmodel.EstadoAventura
+
+ @Composable
+fun TelaAventura(
+    personagem: Personagem,
+    onVoltar: () -> Unit,
+    viewModel: AventuraViewModel = viewModel()
+) {
+    val estadoAventura by viewModel.estadoAventura.collectAsState()
+    val logAventura by viewModel.logAventura.collectAsState()
+    
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        // Cabeçalho
+        Text("Modo Aventura", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // Status do Personagem
+        Card(modifier = Modifier.fillMaxWidth()) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text("${personagem.nome} - Nível ${personagem.nivel}", 
+                     style = MaterialTheme.typography.headlineSmall)
+                Text("PV: ${personagem.pvAtuais}/${personagem.pvMaximos}")
+                Text("XP: ${personagem.experiencia}/${personagem.classe.xpParaProximoNivel(personagem.nivel)}")
+                Text("Estado: ${viewModel.verificarEstadoPersonagem(personagem)}")
+            }
+        }
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // Controles de Aventura
+        when (estadoAventura) {
+            is EstadoAventura.Inativo -> {
+                Button(
+                    onClick = { viewModel.iniciarAventura(personagem) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text("🎮 Iniciar Aventura")
+                }
+            }
+            is EstadoAventura.Ativa -> {
+                Button(
+                    onClick = { viewModel.pararAventura() },
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
+                ) {
+                    Text("⏹️ Parar Aventura")
+                }
+            }
+        }
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // Log de Aventura
+        Text("Log da Aventura:", style = MaterialTheme.typography.headlineSmall)
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .weight(1f)
+        ) {
+            Text(
+                text = logAventura.joinToString(""),
+                modifier = Modifier
+                    .padding(16.dp)
+                    .verticalScroll(rememberScrollState())
+            )
+        }
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // Botão Voltar
+        Button(
+            onClick = onVoltar,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("← Voltar")
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/criacao/TelaAlinhamento.kt ---
+
+// view/criacao/TelaAlinhamento.kt
+package com.olddragon.view.criacao
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import com.olddragon.model.Personagem
+import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaAlinhamento(
+    personagem: Personagem,
+    viewModel: CriacaoPersonagemViewModel
+) {
+    val alinhamentos = listOf("Ordeiro", "Neutro", "Caótico")
+    
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text("Escolha o Alinhamento", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        alinhamentos.forEach { alinhamento ->
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .clickable { viewModel.atualizarAlinhamento(alinhamento) },
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = if (personagem.alinhamento == alinhamento) 8.dp else 2.dp
+                ),
+                border = if (personagem.alinhamento == alinhamento) BorderStroke(2.dp, Color.Blue) else null
+            ) {
+                Text(
+                    text = alinhamento,
+                    modifier = Modifier.padding(16.dp),
+                    style = MaterialTheme.typography.headlineSmall
+                )
+            }
+        }
+        
+        Spacer(modifier = Modifier.weight(1f))
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Button(onClick = { viewModel.voltarEtapa() }) {
+                Text("Voltar")
+            }
+            Button(onClick = { viewModel.avancarEtapa() }) {
+                Text("Próximo")
+            }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/criacao/TelaAtributos.kt ---
+
+// view/criacao/TelaAtributos.kt
+package com.olddragon.view.criacao
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.olddragon.model.Personagem
+import com.olddragon.model.Atributos
+import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaAtributos(
+    personagem: Personagem,
+    viewModel: CriacaoPersonagemViewModel
+) {
+    var forValue by remember { mutableStateOf(personagem.atributos.FOR) }
+    var desValue by remember { mutableStateOf(personagem.atributos.DES) }
+    var conValue by remember { mutableStateOf(personagem.atributos.CON) }
+    var intValue by remember { mutableStateOf(personagem.atributos.INT) }
+    var sabValue by remember { mutableStateOf(personagem.atributos.SAB) }
+    var carValue by remember { mutableStateOf(personagem.atributos.CAR) }
+    
+    val atributosDisponiveis by viewModel.atributosDisponiveis.collectAsState()
+    
+    val valoresAtuais = listOf(forValue, desValue, conValue, intValue, sabValue, carValue)
+    val valoresOrdenadosDisponiveis = atributosDisponiveis.sortedDescending()
+    val valoresOrdenadosAtuais = valoresAtuais.sortedDescending()
+    
+    val atributosValidos = valoresOrdenadosAtuais == valoresOrdenadosDisponiveis
+    
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text("Distribua seus Atributos", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        Text("Valores disponíveis: ${atributosDisponiveis.sortedDescending().joinToString(", ")}")
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        if (!atributosValidos) {
+            Text(
+                "⚠️ Os valores devem corresponder aos disponíveis!",
+                color = Color.Red,
+                style = MaterialTheme.typography.bodyMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+        
+        // Componente para cada atributo
+        AtributoItem("FOR", forValue, { if (it > 3) forValue-- }, { if (it < 18) forValue++ })
+        AtributoItem("DES", desValue, { if (it > 3) desValue-- }, { if (it < 18) desValue++ })
+        AtributoItem("CON", conValue, { if (it > 3) conValue-- }, { if (it < 18) conValue++ })
+        AtributoItem("INT", intValue, { if (it > 3) intValue-- }, { if (it < 18) intValue++ })
+        AtributoItem("SAB", sabValue, { if (it > 3) sabValue-- }, { if (it < 18) sabValue++ })
+        AtributoItem("CAR", carValue, { if (it > 3) carValue-- }, { if (it < 18) carValue++ })
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        Text("PV Atuais: ${personagem.pvAtuais}", style = MaterialTheme.typography.bodyLarge)
+        
+        Spacer(modifier = Modifier.weight(1f))
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Button(onClick = { viewModel.voltarEtapa() }) {
+                Text("Voltar")
+            }
+            Button(
+                onClick = { 
+                    val novosAtributos = Atributos(
+                        FOR = forValue,
+                        DES = desValue,
+                        CON = conValue,
+                        INT = intValue,
+                        SAB = sabValue,
+                        CAR = carValue
+                    )
+                    viewModel.redistribuirAtributos(novosAtributos)
+                    viewModel.avancarEtapa() 
+                },
+                enabled = atributosValidos
+            ) {
+                Text("Próximo")
+            }
+        }
+    }
+}
+
+@Composable
+private fun AtributoItem(
+    nome: String,
+    valor: Int,
+    onDecrement: (Int) -> Unit,
+    onIncrement: (Int) -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(4.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(nome, style = MaterialTheme.typography.bodyLarge)
+            Row {
+                Button(
+                    onClick = { onDecrement(valor) },
+                    modifier = Modifier.padding(end = 8.dp)
+                ) {
+                    Text("-")
+                }
+                Text("$valor", style = MaterialTheme.typography.headlineSmall)
+                Button(
+                    onClick = { onIncrement(valor) },
+                    modifier = Modifier.padding(start = 8.dp)
+                ) {
+                    Text("+")
+                }
+            }
+            Text("Mod: ${calcularModificador(valor)}")
+        }
+    }
+}
+
+private fun calcularModificador(valor: Int): Int = when {
+    valor <= 3 -> -3
+    valor <= 5 -> -2
+    valor <= 8 -> -1
+    valor <= 12 -> 0
+    valor <= 14 -> 1
+    valor <= 16 -> 2
+    valor <= 18 -> 3
+    else -> 4
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/criacao/TelaClasse.kt ---
+
+// view/criacao/TelaClasse.kt
+package com.olddragon.view.criacao
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import com.olddragon.model.Personagem
+import com.olddragon.model.Classe
+import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaClasse(
+    personagem: Personagem,
+    viewModel: CriacaoPersonagemViewModel
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text("Escolha sua Classe", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        val classes = viewModel.classes
+        
+        classes.forEach { classe ->
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .clickable { viewModel.selecionarClasse(classe) },
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = if (personagem.classe.nome == classe.nome) 8.dp else 2.dp
+                ),
+                border = if (personagem.classe.nome == classe.nome) BorderStroke(2.dp, Color.Blue) else null
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(classe.nome, style = MaterialTheme.typography.headlineSmall)
+                    Text("Dado de Vida: d${classe.dadoVida}")
+                }
+            }
+        }
+        
+        Spacer(modifier = Modifier.weight(1f))
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Button(onClick = { viewModel.voltarEtapa() }) {
+                Text("Voltar")
+            }
+            Button(
+                onClick = { viewModel.avancarEtapa() },
+                enabled = personagem.classe.nome.isNotBlank()
+            ) {
+                Text("Próximo")
+            }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/criacao/TelaEstiloAtributosENome.kt ---
+
+// view/criacao/TelaEstiloAtributosENome.kt
+package com.olddragon.view.criacao
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import com.olddragon.model.Personagem
+import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaEstiloAtributosENome(
+    personagem: Personagem,
+    viewModel: CriacaoPersonagemViewModel
+) {
+    var nome by remember { mutableStateOf(personagem.nome) }
+    var estiloSelecionado by remember { mutableStateOf("") }
+    
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text("Criação de Personagem", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        Text("Nome do Personagem", style = MaterialTheme.typography.headlineSmall)
+        Spacer(modifier = Modifier.height(8.dp))
+        
+        OutlinedTextField(
+            value = nome,
+            onValueChange = { 
+                nome = it
+                viewModel.atualizarNome(it)
+            },
+            label = { Text("Digite o nome do seu personagem") },
+            modifier = Modifier.fillMaxWidth()
+        )
+        
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        Text("Escolha o Estilo de Atributos", style = MaterialTheme.typography.headlineSmall)
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        val estilos = listOf(
+            "Classico" to "3d6 em ordem fixa (Hard)",
+            "Aventureiro" to "3d6 distribuídos livremente (Normal)", 
+            "Heroico" to "4d6 descartando menor (Fácil)"
+        )
+        
+        estilos.forEach { (estilo, descricao) ->
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .clickable { estiloSelecionado = estilo },
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = if (estiloSelecionado == estilo) 8.dp else 4.dp
+                ),
+                border = if (estiloSelecionado == estilo) BorderStroke(2.dp, Color.Blue) else null
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(estilo, style = MaterialTheme.typography.headlineSmall)
+                    Text(descricao, style = MaterialTheme.typography.bodyMedium)
+                }
+            }
+        }
+        
+        Spacer(modifier = Modifier.weight(1f))
+        
+        Button(
+            onClick = { 
+                if (estiloSelecionado.isNotBlank()) {
+                    viewModel.selecionarEstiloAtributos(estiloSelecionado, nome)
+                }
+            },
+            modifier = Modifier.fillMaxWidth(),
+            enabled = nome.isNotBlank() && estiloSelecionado.isNotBlank()
+        ) {
+            Text("Próximo")
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/criacao/TelaRaca.kt ---
+
+// view/criacao/TelaRaca.kt
+package com.olddragon.view.criacao
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import com.olddragon.model.Personagem
+import com.olddragon.model.Raca
+import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaRaca(
+    personagem: Personagem,
+    viewModel: CriacaoPersonagemViewModel
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text("Escolha sua Raça", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        val racas = viewModel.racas
+        
+        racas.forEach { raca ->
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .clickable { viewModel.selecionarRaca(raca) },
+                elevation = CardDefaults.cardElevation(
+                    defaultElevation = if (personagem.raca.nome == raca.nome) 8.dp else 2.dp
+                ),
+                border = if (personagem.raca.nome == raca.nome) BorderStroke(2.dp, Color.Blue) else null
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(raca.nome, style = MaterialTheme.typography.headlineSmall)
+                    Text("Movimento: ${raca.movimentoBase}m")
+                    Text("Infravisão: ${raca.infravisao}m")
+                }
+            }
+        }
+        
+        Spacer(modifier = Modifier.weight(1f))
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Button(onClick = { viewModel.voltarEtapa() }) {
+                Text("Voltar")
+            }
+            Button(
+                onClick = { viewModel.avancarEtapa() },
+                enabled = personagem.raca.nome.isNotBlank()
+            ) {
+                Text("Próximo")
+            }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/criacao/TelaResumo.kt ---
+
+// view/criacao/TelaResumo.kt
+package com.olddragon.view.criacao
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.olddragon.model.Personagem
+import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaResumo(
+    personagem: Personagem,
+    viewModel: CriacaoPersonagemViewModel
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Text("Resumo do Personagem", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+        ) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                Text("Nome: ${personagem.nome}", style = MaterialTheme.typography.bodyLarge)
+                Text("Raça: ${personagem.raca.nome}")
+                Text("Classe: ${personagem.classe.nome}")
+                Text("Nível: ${personagem.nivel}")
+                Text("Alinhamento: ${personagem.alinhamento}")
+                Text("PV: ${personagem.pvAtuais}/${personagem.pvMaximos}")
+                Text("CA: ${personagem.calcularCA()}")
+                Text("BAC: ${personagem.calcularBAC()}")
+                Text("BAD: ${personagem.calcularBAD()}")
+                
+                Spacer(modifier = Modifier.height(16.dp))
+                Text("Atributos:", style = MaterialTheme.typography.bodyLarge)
+                Text("FOR: ${personagem.atributos.FOR} (Mod: ${personagem.atributos.calcularModificador(personagem.atributos.FOR)})")
+                Text("DES: ${personagem.atributos.DES} (Mod: ${personagem.atributos.calcularModificador(personagem.atributos.DES)})")
+                Text("CON: ${personagem.atributos.CON} (Mod: ${personagem.atributos.calcularModificador(personagem.atributos.CON)})")
+                Text("INT: ${personagem.atributos.INT} (Mod: ${personagem.atributos.calcularModificador(personagem.atributos.INT)})")
+                Text("SAB: ${personagem.atributos.SAB} (Mod: ${personagem.atributos.calcularModificador(personagem.atributos.SAB)})")
+                Text("CAR: ${personagem.atributos.CAR} (Mod: ${personagem.atributos.calcularModificador(personagem.atributos.CAR)})")
+            }
+        }
+        
+        Spacer(modifier = Modifier.weight(1f))
+        
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Button(onClick = { viewModel.voltarEtapa() }) {
+                Text("Voltar")
+            }
+            Button(onClick = { viewModel.finalizarCriacao() }) {
+                Text("Ir para Home")
+            }
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/view/home/TelaPrincipal.kt ---
+
+// view/home/TelaPrincipal.kt
+package com.olddragon.view.home
+
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.clickable
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import com.olddragon.model.Personagem
+import com.olddragon.view.viewmodel.CriacaoPersonagemViewModel
+
+@Composable
+fun TelaPrincipal(
+    personagem: Personagem,
+    viewModel: CriacaoPersonagemViewModel
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("Old Dragon", style = MaterialTheme.typography.headlineLarge)
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        // Aqui vai a imagem do personagem no futuro
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+        ) {
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text("Imagem do ${personagem.nome}", style = MaterialTheme.typography.bodyLarge)
+                Text("Nível ${personagem.nivel} ${personagem.classe.nome}")
+            }
+        }
+        
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        val opcoes = listOf("Personagem", "Inventário", "Loja", "Aventura")
+        
+        opcoes.forEach { opcao ->
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+                    .clickable { /* Navegar para tela específica */ },
+                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(opcao, style = MaterialTheme.typography.headlineSmall)
+                    Text("→", style = MaterialTheme.typography.bodyLarge)
+                }
+            }
+        }
+        
+        Spacer(modifier = Modifier.weight(1f))
+        
+        Button(onClick = { viewModel.reiniciarCriacao() }) {
+            Text("Novo Personagem")
+        }
+    }
+}
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/viewmodel/CriacaoPersonagemViewModel.kt ---
+
+// viewmodel/CriacaoPersonagemViewModel.kt
+package com.olddragon.view.viewmodel
+
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import com.olddragon.model.Atributos
+import com.olddragon.model.Classe
+import com.olddragon.model.Personagem
+import com.olddragon.model.Raca
+import com.olddragon.model.classe.Clerigo
+import com.olddragon.model.classe.Guerreiro
+import com.olddragon.model.classe.Ladrao
+import com.olddragon.model.raca.Anao
+import com.olddragon.model.raca.Elfo
+import com.olddragon.model.raca.Halfling
+import com.olddragon.model.raca.Humano
+import kotlin.random.Random
+
+class CriacaoPersonagemViewModel : ViewModel() {
+    private var _estadoPersonagem = MutableStateFlow(Personagem())
+    val estadoPersonagem: StateFlow<Personagem> = _estadoPersonagem.asStateFlow()
+    
+    private var _etapaAtual = MutableStateFlow(0)
+    val etapaAtual: StateFlow<Int> = _etapaAtual.asStateFlow()
+
+    private var _atributosDisponiveis = MutableStateFlow<List<Int>>(emptyList())
+    val atributosDisponiveis: StateFlow<List<Int>> = _atributosDisponiveis.asStateFlow()
+
+    val classes = listOf(Guerreiro(), Clerigo(), Ladrao())
+    val racas = listOf(Humano(), Elfo(), Anao(), Halfling())
+
+    fun selecionarEstiloAtributos(estilo: String, nome: String = "") {
+        val atributosRolados = when (estilo) {
+            "Classico" -> rolarAtributosClassico()
+            "Aventureiro" -> rolarAtributosAventureiro()
+            "Heroico" -> rolarAtributosHeroico()
+            else -> Atributos()
+        }
+        
+        _atributosDisponiveis.value = listOf(
+            atributosRolados.FOR,
+            atributosRolados.DES, 
+            atributosRolados.CON,
+            atributosRolados.INT,
+            atributosRolados.SAB,
+            atributosRolados.CAR
+        )
+        
+        _estadoPersonagem.value = _estadoPersonagem.value.copy(
+            nome = nome,
+            atributos = atributosRolados
+        )
+        avancarEtapa()
+    }
+
+    private fun rolarAtributosClassico(): Atributos {
+        val dados = List(6) { rolar3d6() }
+        return Atributos(
+            FOR = dados[0],
+            DES = dados[1],
+            CON = dados[2],
+            INT = dados[3],
+            SAB = dados[4],
+            CAR = dados[5]
+        )
+    }
+
+    private fun rolarAtributosAventureiro(): Atributos {
+        val dados = List(6) { rolar3d6() }.sortedDescending()
+        return Atributos().copy(
+            FOR = dados[0],
+            DES = dados[1],
+            CON = dados[2],
+            INT = dados[3],
+            SAB = dados[4],
+            CAR = dados[5]
+        )
+    }
+
+    private fun rolarAtributosHeroico(): Atributos {
+        val dados = List(6) { rolar4d6DescartarMenor() }.sortedDescending()
+        return Atributos().copy(
+            FOR = dados[0],
+            DES = dados[1],
+            CON = dados[2],
+            INT = dados[3],
+            SAB = dados[4],
+            CAR = dados[5]
+        )
+    }
+
+    private fun rolar3d6(): Int = List(3) { Random.nextInt(1, 7) }.sum()
+    
+    private fun rolar4d6DescartarMenor(): Int {
+        val dados = List(4) { Random.nextInt(1, 7) }.sorted()
+        return dados.drop(1).sum()
+    }
+
+    fun redistribuirAtributos(novoAtributos: Atributos) {
+        val personagem = _estadoPersonagem.value
+        val pvMax = calcularPVParaClasse(personagem.classe, personagem.atributos.CON)
+        _estadoPersonagem.value = personagem.copy(
+            atributos = novoAtributos,
+            pvMaximos = pvMax,
+            pvAtuais = pvMax
+        )
+    }
+
+    fun atualizarNome(nome: String) {
+        _estadoPersonagem.value = _estadoPersonagem.value.copy(nome = nome)
+    }
+    
+    fun selecionarRaca(raca: Raca) {
+        _estadoPersonagem.value = _estadoPersonagem.value.copy(raca = raca)
+    }
+    
+    fun selecionarClasse(classe: Classe) {
+        val personagem = _estadoPersonagem.value
+        val pvMax = calcularPVParaClasse(classe, personagem.atributos.CON)
+        _estadoPersonagem.value = personagem.copy(
+            classe = classe,
+            pvMaximos = pvMax,
+            pvAtuais = pvMax
+        )
+    }
+    
+    private fun calcularPVParaClasse(classe: Classe, con: Int): Int {
+        val pvBase = classe.calcularPVBase()
+        val modificador = when {
+            con <= 3 -> -3
+            con <= 5 -> -2
+            con <= 8 -> -1
+            con <= 12 -> 0
+            con <= 14 -> 1
+            con <= 16 -> 2
+            con <= 18 -> 3
+            else -> 4
+        }
+        return maxOf(1, pvBase + modificador)
+    }
+    
+    fun atualizarAlinhamento(alinhamento: String) {
+        _estadoPersonagem.value = _estadoPersonagem.value.copy(alinhamento = alinhamento)
+    }
+    
+    fun avancarEtapa() {
+        _etapaAtual.value++
+    }
+    
+    fun voltarEtapa() {
+        _etapaAtual.value--
+    }
+    
+    fun finalizarCriacao() {
+        _etapaAtual.value = 6
+    }
+    
+    fun reiniciarCriacao() {
+        _estadoPersonagem.value = Personagem()
+        _etapaAtual.value = 0
+        _atributosDisponiveis.value = emptyList()
+    }
+}
+
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/viewmodel/AventuraViewModel.kt ---
+
+package com.olddragon.viewmodel
+
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
+import com.olddragon.model.Personagem
+import com.olddragon.service.AventuraService
+import com.olddragon.service.NotificationChannelCreator
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+
+class AventuraViewModel(application: Application) : AndroidViewModel(application) {
+    
+    private val _estadoAventura = MutableStateFlow<EstadoAventura>(EstadoAventura.Inativo)
+    val estadoAventura: StateFlow<EstadoAventura> = _estadoAventura
+    
+    private val _logAventura = MutableStateFlow<List<String>>(emptyList())
+    val logAventura: StateFlow<List<String>> = _logAventura
+    
+    init {
+        // Criar canal de notificação quando o ViewModel é criado
+        NotificationChannelCreator.createAventuraChannel(application)
+    }
+    
+    fun iniciarAventura(personagem: Personagem) {
+        viewModelScope.launch {
+            _estadoAventura.value = EstadoAventura.Ativa(personagem)
+            adicionarLog("🎮 ${personagem.nome} iniciou uma aventura!")
+            
+            // Iniciar o service em background
+            AventuraService.startService(getApplication(), personagem)
+        }
+    }
+    
+    fun pararAventura() {
+        viewModelScope.launch {
+            _estadoAventura.value = EstadoAventura.Inativo
+            adicionarLog("⏹️ Aventura interrompida")
+            
+            // Parar o service
+            AventuraService.stopService(getApplication())
+        }
+    }
+    
+    fun verificarEstadoPersonagem(personagem: Personagem): String {
+        return when {
+            personagem.pvAtuais <= 0 -> "💀 Morto (Recuperando...)"
+            personagem.pvAtuais < personagem.pvMaximos / 2 -> "😰 Ferido"
+            else -> "😊 Saudável"
+        }
+    }
+    
+    private fun adicionarLog(mensagem: String) {
+        _logAventura.value = _logAventura.value + "$mensagem\n"
+        
+        // Manter apenas os últimos 10 logs
+        if (_logAventura.value.size > 10) {
+            _logAventura.value = _logAventura.value.drop(1)
+        }
+    }
+}
+
+sealed class EstadoAventura {
+    object Inativo : EstadoAventura()
+    data class Ativa(val personagem: Personagem) : EstadoAventura()
+}
+
+
+--- /home/rafael/AndroidStudioProjects/OldDragon/app/src/main/java/com/olddragon/viewmodel/CombateViewModel.kt ---
+
+// viewmodel/CombateViewModel.kt
+package com.olddragon.viewmodel
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.olddragon.model.Personagem
+import com.olddragon.service.AventuraService
+import com.olddragon.service.CombateService
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.launch
+
+class CombateViewModel : ViewModel() {
+    private val combateService = CombateService()
+    
+    private val _estadoCombate = MutableStateFlow<EstadoCombate>(EstadoCombate.Inativo)
+    val estadoCombate: StateFlow<EstadoCombate> = _estadoCombate
+    
+    private val _logCombate = MutableStateFlow<List<String>>(emptyList())
+    val logCombate: StateFlow<List<String>> = _logCombate
+    
+    fun iniciarAventura(personagem: Personagem) {
+        viewModelScope.launch {
+            _estadoCombate.value = EstadoCombate.EmAventura(personagem.copy())
+            adicionarLog("${personagem.nome} iniciou uma aventura!")
+            
+            // Em um app real, você iniciaria o Service aqui
+            // val intent = Intent(context, AventuraService::class.java).apply {
+            //     putExtra("personagem", personagem)
+            // }
+            // context.startService(intent)
+        }
+    }
+    
+    fun pararAventura() {
+        viewModelScope.launch {
+            _estadoCombate.value = EstadoCombate.Inativo
+            adicionarLog("Aventura interrompida.")
+            
+            // Em um app real, você pararia o Service aqui
+            // context.stopService(Intent(context, AventuraService::class.java))
+        }
+    }
+    
+    fun simularCombateManual(personagem: Personagem) {
+        viewModelScope.launch {
+            val personagemAtual = personagem.copy() // Work with a mutable copy
+            _estadoCombate.value = EstadoCombate.EmCombate(personagemAtual)
+            
+            val inimigo = combateService.gerarInimigoAleatorio(personagemAtual.nivel)
+            adicionarLog("${personagemAtual.nome} encontrou um ${inimigo.nome}!")
+            
+            val resultado = combateService.simularCombate(personagemAtual, inimigo)
+            
+            if (resultado.vitoria) {
+                adicionarLog("${personagemAtual.nome} venceu! Ganhou ${resultado.xpGanha} XP")
+                personagemAtual.experiencia += resultado.xpGanha
+                personagemAtual.pvAtuais -= resultado.danoSofrido
+                
+                if (personagemAtual.pvAtuais <= 0) {
+                    adicionarLog("${personagemAtual.nome} morreu após a vitória!")
+                    _estadoCombate.value = EstadoCombate.Morto(personagemAtual)
+                } else {
+                    _estadoCombate.value = EstadoCombate.EmAventura(personagemAtual)
+                }
+            } else {
+                adicionarLog("${personagemAtual.nome} foi derrotado!")
+                personagemAtual.pvAtuais = 0
+                _estadoCombate.value = EstadoCombate.Morto(personagemAtual)
+            }
+        }
+    }
+    
+    private fun adicionarLog(mensagem: String) {
+        _logCombate.value = _logCombate.value + mensagem
+    }
+}
+
+sealed class EstadoCombate {
+    object Inativo : EstadoCombate()
+    data class EmAventura(val personagem: Personagem) : EstadoCombate()
+    data class EmCombate(val personagem: Personagem) : EstadoCombate()
+    data class Morto(val personagem: Personagem) : EstadoCombate()
+}
+
+
+--- End of content ---

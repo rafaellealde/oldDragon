@@ -1,13 +1,15 @@
 // model/Raca.kt
 package com.olddragon.model
 
+import java.io.Serializable
+
 abstract class Raca(
     val nome: String,
     val movimentoBase: Int,
     val infravisao: Int,
     val alinhamentoTendencia: String,
     val habilidades: List<String>
-) {
+) : Serializable {
     abstract fun podeUsarArmaEspecial(arma: String): Boolean
     abstract fun podeUsarArmaduraEspecial(armadura: String): Boolean
     abstract fun calcularBonusJP(tipoJP: String): Int
