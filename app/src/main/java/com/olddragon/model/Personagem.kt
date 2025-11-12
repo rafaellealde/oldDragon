@@ -11,14 +11,15 @@ import com.olddragon.model.raca.Halfling
 data class Personagem(
     val id: Long = 0,
     val nome: String = "",
-    val nivel: Int = 1,
+    var nivel: Int = 1,
     val raca: Raca = Humano(),
     val classe: Classe = Guerreiro(),
     val alinhamento: String = "Neutro",
     val atributos: Atributos = Atributos(),
-    val experiencia: Int = 0,
-    val pvAtuais: Int = 0,
-    val pvMaximos: Int = 0
+    var experiencia: Int = 0,
+    var pvAtuais: Int = 0,
+    var pvMaximos: Int = 0,
+    val emAventura: Boolean = false
 ) {
     fun calcularPV(): Int {
         val pvBase = classe.calcularPVBase()
@@ -44,4 +45,7 @@ data class Personagem(
     fun podeSubirDeNivel(): Boolean {
         return experiencia >= xpParaProximoNivel()
     }
+    
+    fun estaVivo(): Boolean = pvAtuais > 0
+    fun precisaRecuperar(): Boolean = pvAtuais <= 0
 }
