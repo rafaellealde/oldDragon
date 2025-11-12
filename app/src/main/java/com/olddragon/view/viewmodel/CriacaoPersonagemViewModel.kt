@@ -5,7 +5,17 @@ import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import com.olddragon.model.*
+import com.olddragon.model.Atributos
+import com.olddragon.model.Classe
+import com.olddragon.model.Personagem
+import com.olddragon.model.Raca
+import com.olddragon.model.classe.Clerigo
+import com.olddragon.model.classe.Guerreiro
+import com.olddragon.model.classe.Ladrao
+import com.olddragon.model.raca.Anao
+import com.olddragon.model.raca.Elfo
+import com.olddragon.model.raca.Halfling
+import com.olddragon.model.raca.Humano
 import kotlin.random.Random
 
 class CriacaoPersonagemViewModel : ViewModel() {
@@ -17,6 +27,9 @@ class CriacaoPersonagemViewModel : ViewModel() {
 
     private var _atributosDisponiveis = MutableStateFlow<List<Int>>(emptyList())
     val atributosDisponiveis: StateFlow<List<Int>> = _atributosDisponiveis.asStateFlow()
+
+    val classes = listOf(Guerreiro(), Clerigo(), Ladrao())
+    val racas = listOf(Humano(), Elfo(), Anao(), Halfling())
 
     fun selecionarEstiloAtributos(estilo: String, nome: String = "") {
         val atributosRolados = when (estilo) {
@@ -87,7 +100,7 @@ class CriacaoPersonagemViewModel : ViewModel() {
 
     fun redistribuirAtributos(novoAtributos: Atributos) {
         val personagem = _estadoPersonagem.value
-        val pvMax = calcularPVParaClasse(personagem.classe, novoAtributos.CON)
+        val pvMax = calcularPVParaClasse(personagem.classe, personagem.atributos.CON)
         _estadoPersonagem.value = personagem.copy(
             atributos = novoAtributos,
             pvMaximos = pvMax,
@@ -114,11 +127,7 @@ class CriacaoPersonagemViewModel : ViewModel() {
     }
     
     private fun calcularPVParaClasse(classe: Classe, con: Int): Int {
-        val pvBase = when (classe) {
-            is Classe.Guerreiro -> 10
-            is Classe.Clerigo -> 8
-            is Classe.Ladrao -> 6
-        }
+        val pvBase = classe.calcularPVBase()
         val modificador = when {
             con <= 3 -> -3
             con <= 5 -> -2

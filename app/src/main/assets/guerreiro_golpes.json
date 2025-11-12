@@ -1,0 +1,84 @@
+{
+  "golpes": [
+    {
+      "nome": "Golpe Básico",
+      "tipo": "dano",
+      "dano": "1d8 + FOR",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Um ataque corpo a corpo básico com sua arma"
+    },
+    {
+      "nome": "Investida",
+      "tipo": "dano",
+      "dano": "1d10 + FOR",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Avança rapidamente contra o inimigo"
+    },
+    {
+      "nome": "Golpe Poderoso",
+      "tipo": "dano",
+      "dano": "2d6 + FOR",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Um golpe carregado com força total"
+    },
+    {
+      "nome": "Ataque Duplo",
+      "tipo": "dano",
+      "dano": "1d8 + FOR (x2)",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Dois ataques rápidos consecutivos"
+    },
+    {
+      "nome": "Giro da Morte",
+      "tipo": "dano",
+      "dano": "2d8 + FOR",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Gira atacando todos os inimigos próximos"
+    },
+    {
+      "nome": "Golpe Esmagador",
+      "tipo": "dano",
+      "dano": "3d6 + FOR",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Um golpe tão forte que pode atordoar o inimigo"
+    },
+    {
+      "nome": "Fúria do Guerreiro",
+      "tipo": "dano",
+      "dano": "3d8 + FOR",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Entra em fúria, aumentando o dano drasticamente"
+    },
+    {
+      "nome": "Ataque Triplo",
+      "tipo": "dano",
+      "dano": "1d8 + FOR (x3)",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Três ataques extremamente rápidos"
+    },
+    {
+      "nome": "Golpe Final",
+      "tipo": "dano",
+      "dano": "4d10 + FOR",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Um golpe devastador que consome toda a energia"
+    },
+    {
+      "nome": "Tempestade de Aço",
+      "tipo": "dano",
+      "dano": "2d10 + FOR (área)",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Múltiplos golpes contra todos os inimigos ao redor"
+    }
+  ]
+}

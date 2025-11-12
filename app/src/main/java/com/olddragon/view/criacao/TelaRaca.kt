@@ -27,7 +27,7 @@ fun TelaRaca(
         Text("Escolha sua Raça", style = MaterialTheme.typography.headlineLarge)
         Spacer(modifier = Modifier.height(32.dp))
         
-        val racas = listOf(Raca.Humano, Raca.Elfo, Raca.Anao, Raca.Halfling)
+        val racas = viewModel.racas
         
         racas.forEach { raca ->
             Card(
@@ -36,9 +36,9 @@ fun TelaRaca(
                     .padding(8.dp)
                     .clickable { viewModel.selecionarRaca(raca) },
                 elevation = CardDefaults.cardElevation(
-                    defaultElevation = if (personagem.raca == raca) 8.dp else 2.dp
+                    defaultElevation = if (personagem.raca.nome == raca.nome) 8.dp else 2.dp
                 ),
-                border = if (personagem.raca == raca) BorderStroke(2.dp, Color.Blue) else null
+                border = if (personagem.raca.nome == raca.nome) BorderStroke(2.dp, Color.Blue) else null
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(raca.nome, style = MaterialTheme.typography.headlineSmall)

@@ -1,14 +1,31 @@
+// model/Raca.kt
 package com.olddragon.model
 
-sealed class Raca(
+abstract class Raca(
     val nome: String,
     val movimentoBase: Int,
     val infravisao: Int,
     val alinhamentoTendencia: String,
     val habilidades: List<String>
 ) {
-    object Humano : Raca("Humano", 9, 0, "Qualquer", listOf("Aprendizado", "Adaptabilidade"))
-    object Elfo : Raca("Elfo", 9, 18, "Neutro", listOf("Percepção Natural", "Graciosos"))
-    object Anao : Raca("Anão", 6, 18, "Ordeiro", listOf("Mineradores", "Vigoroso"))
-    object Halfling : Raca("Halfling", 6, 0, "Neutro", listOf("Furtivos", "Destemidos"))
+    abstract fun podeUsarArmaEspecial(arma: String): Boolean
+    abstract fun podeUsarArmaduraEspecial(armadura: String): Boolean
+    abstract fun calcularBonusJP(tipoJP: String): Int
+    
+    fun temInfravisao(): Boolean = infravisao > 0
+    
+    companion object {
+        val TODAS: List<Raca> by lazy {
+            listOf(
+                com.olddragon.model.raca.Humano(),
+                com.olddragon.model.raca.Elfo(),
+                com.olddragon.model.raca.Anao(),
+                com.olddragon.model.raca.Halfling()
+            )
+        }
+        
+        fun porNome(nome: String): Raca? {
+            return TODAS.find { it.nome == nome }
+        }
+    }
 }

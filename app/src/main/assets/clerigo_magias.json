@@ -1,0 +1,84 @@
+{
+  "magias": [
+    {
+      "nome": "Curar Ferimentos Leves",
+      "tipo": "cura",
+      "cura": "1d8 + SAB",
+      "dano": null,
+      "nivel": 1,
+      "descricao": "Cura ferimentos superficiais de um aliado"
+    },
+    {
+      "nome": "Bênção",
+      "tipo": "buff",
+      "cura": null,
+      "dano": null,
+      "nivel": 1,
+      "descricao": "Aliados próximos recebem +1 em ataques por 1 minuto"
+    },
+    {
+      "nome": "Proteção contra o Mal",
+      "tipo": "defesa",
+      "cura": null,
+      "dano": null,
+      "nivel": 1,
+      "descricao": "Protege contra ataques de criaturas do mal"
+    },
+    {
+      "nome": "Curar Ferimentos Moderados",
+      "tipo": "cura",
+      "cura": "2d8 + SAB",
+      "dano": null,
+      "nivel": 3,
+      "descricao": "Cura ferimentos moderados de um aliado"
+    },
+    {
+      "nome": "Chama Sagrada",
+      "tipo": "dano",
+      "cura": null,
+      "dano": "2d6 + SAB",
+      "nivel": 3,
+      "descricao": "Invoca chamas divinas que queimam inimigos"
+    },
+    {
+      "nome": "Curar Ferimentos Graves",
+      "tipo": "cura",
+      "cura": "3d8 + SAB",
+      "dano": null,
+      "nivel": 5,
+      "descricao": "Cura ferimentos graves de um aliado"
+    },
+    {
+      "nome": "Raio Solar",
+      "tipo": "dano",
+      "cura": null,
+      "dano": "4d6 + SAB",
+      "nivel": 5,
+      "descricao": "Um raio de luz solar queima inimigos"
+    },
+    {
+      "nome": "Ressurreição",
+      "tipo": "cura",
+      "cura": "PV_MAX",
+      "dano": null,
+      "nivel": 7,
+      "descricao": "Ressuscita um aliado recentemente falecido"
+    },
+    {
+      "nome": "Julgamento Divino",
+      "tipo": "dano",
+      "cura": null,
+      "dano": "6d8 + SAB",
+      "nivel": 7,
+      "descricao": "Um poderoso julgamento divino sobre os inimigos"
+    },
+    {
+      "nome": "Cura Completa",
+      "tipo": "cura",
+      "cura": "PV_MAX",
+      "dano": null,
+      "nivel": 9,
+      "descricao": "Cura todos os ferimentos do grupo"
+    }
+  ]
+}

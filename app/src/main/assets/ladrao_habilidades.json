@@ -1,0 +1,84 @@
+{
+  "habilidades": [
+    {
+      "nome": "Ataque Furtivo",
+      "tipo": "dano",
+      "dano": "1d6 + DES",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Ataque sorrateiro que causa dano extra"
+    },
+    {
+      "nome": "Tiro Preciso",
+      "tipo": "dano",
+      "dano": "1d8 + DES",
+      "cura": null,
+      "nivel": 1,
+      "descricao": "Um disparo à distância com precisão mortal"
+    },
+    {
+      "nome": "Ataque Furtivo Melhorado",
+      "tipo": "dano",
+      "dano": "2d6 + DES",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Ataque furtivo com dano significativamente maior"
+    },
+    {
+      "nome": "Tiro Rápido",
+      "tipo": "dano",
+      "dano": "1d6 + DES (x2)",
+      "cura": null,
+      "nivel": 3,
+      "descricao": "Dois disparos rápidos consecutivos"
+    },
+    {
+      "nome": "Ataque das Sombras",
+      "tipo": "dano",
+      "dano": "3d6 + DES",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Ataque das sombras com dano crítico aumentado"
+    },
+    {
+      "nome": "Chuva de Flechas",
+      "tipo": "dano",
+      "dano": "2d8 + DES (área)",
+      "cura": null,
+      "nivel": 5,
+      "descricao": "Múltiplos disparos contra vários alvos"
+    },
+    {
+      "nome": "Golpe Traiçoeiro",
+      "tipo": "dano",
+      "dano": "4d6 + DES",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Um golpe que ignora parte da defesa do inimigo"
+    },
+    {
+      "nome": "Tiro Certeiro",
+      "tipo": "dano",
+      "dano": "3d8 + DES",
+      "cura": null,
+      "nivel": 7,
+      "descricao": "Um disparo que nunca erra o alvo"
+    },
+    {
+      "nome": "Assassinato",
+      "tipo": "dano",
+      "dano": "5d8 + DES",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Ataque fatal que pode eliminar instantaneamente"
+    },
+    {
+      "nome": "Saraivada de Projéteis",
+      "tipo": "dano",
+      "dano": "3d10 + DES (área)",
+      "cura": null,
+      "nivel": 9,
+      "descricao": "Dispara projéteis em todos os inimigos visíveis"
+    }
+  ]
+}
